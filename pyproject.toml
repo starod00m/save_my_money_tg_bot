@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "save_my_money_tg_bot"
+version = "0.1.0"
+description = ""
+authors = ["Никита Федосов <nikita@fedosov.net>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-telegram-bot = {extras = ["job-queue"], version = "^20.2"}
+sqlmodel = "^0.0.8"
+loguru = "^0.7.0"
+APScheduler = "^3.10.1"
+pydantic = "^1.10.7"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 79
